@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kinecab</string>
+    <string name="app_title">Gestion de cabinet - Aline Thiernesse</string>
+    <string name="subtitle_init">Page de démarrage</string>
+    <string name="patients_list">Liste des patients</string>
+</resources>

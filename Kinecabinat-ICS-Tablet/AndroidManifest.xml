@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="be.geraerts"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="15"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <application android:label="@string/app_name" android:icon="@drawable/skull" android:logo="@drawable/skull">
+        <activity android:name="KineCabinatStartActivity"
+                  android:label="@string/app_name"
+                  android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <provider android:name=".content.PatientContentProvider"
+                  android:authorities="be.geraerts.patientProvider"/>
+    </application>
+
+</manifest>
