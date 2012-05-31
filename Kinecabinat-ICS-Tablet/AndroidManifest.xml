@@ -15,7 +15,7 @@
             </intent-filter>
         </activity>
         <provider android:name=".content.PatientContentProvider"
-                  android:authorities="be.geraerts.patientProvider"/>
+                  android:authorities="be.geraerts.content.PatientContentProvider"/>
     </application>
 
 </manifest>

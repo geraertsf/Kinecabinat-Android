@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="list_element_paper">#00FF66</color>
+    <color name="list_element_text">#000000</color>
+    <color name="list_element_margin">#00FF66</color>
+    <color name="list_element_lines">#F5F5F5</color>
+
+
+</resources>

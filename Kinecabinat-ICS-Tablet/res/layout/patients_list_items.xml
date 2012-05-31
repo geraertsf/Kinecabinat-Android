@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/rowTel"
+            android:background="@color/list_element_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:fadingEdge="vertical"
+            android:textColor="@color/list_element_text"
+            android:layout_alignParentRight="true"
+            />
+    <be.geraerts.customview.KinecabinatListItemView
+            android:id="@+id/rowNames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:fadingEdge="vertical"
+            android:textColor="@color/list_element_text"
+            android:layout_toLeftOf="@+id/rowTel"
+            />
+
+</RelativeLayout>

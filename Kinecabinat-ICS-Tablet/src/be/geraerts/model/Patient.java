@@ -22,6 +22,15 @@ public class Patient {
     private List<Address> addresses = new ArrayList<Address>();
 
 
+    public Patient(String name, String firstName, String tel, String gsm1) {
+        this.name = name;
+        this.firstName = firstName;
+        this.tel = tel;
+        this.gsm1 = gsm1;
+        this.gsm2 = null;
+        this.birthDate = null;
+    }
+
     public Patient(long patientId, String name, String firstName) {
         this.patientId = patientId;
         this.name = name;
