@@ -7,6 +7,8 @@ import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import be.geraerts.content.PatientContentProvider;
 import be.geraerts.fragments.AgendaFragment;
 import be.geraerts.fragments.PatientsFragment;
@@ -68,6 +70,17 @@ public class KineCabinatStartActivity extends Activity implements LoaderManager.
         //getLoaderManager().initLoader(0, null, this);
 
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+
+        return true;
     }
 
     @Override

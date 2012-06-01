@@ -66,10 +66,7 @@ public class PatientListAdapter extends ArrayAdapter<Patient> {
 
         if (patient.getTel() != null) {
             builderTel.append(patient.getTel());
-            builderTel.append(" - ");
-        }
-
-        if (patient.getGsm1() != null) {
+        } else if (patient.getGsm1() != null) {
             builderTel.append(patient.getGsm1());
         }
 

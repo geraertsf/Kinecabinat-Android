@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Menu principal pour la gestion de l'application Kinecabinat
+ -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_patient"
+          android:icon="@drawable/skull_patient_48x48"
+          android:showAsAction="always"/>
+    <item android:id="@+id/menu_agenda"
+          android:icon="@drawable/ic_calendar"
+          android:showAsAction="always"/>
+
+</menu>
