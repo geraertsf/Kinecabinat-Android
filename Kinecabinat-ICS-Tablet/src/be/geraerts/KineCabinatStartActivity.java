@@ -4,15 +4,20 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import be.geraerts.content.PatientContentProvider;
 import be.geraerts.fragments.AgendaFragment;
 import be.geraerts.fragments.PatientsFragment;
 import be.geraerts.tabs.TabListener;
+
+import java.util.Calendar;
 
 public class KineCabinatStartActivity extends Activity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -81,6 +86,40 @@ public class KineCabinatStartActivity extends Activity implements LoaderManager.
         inflater.inflate(R.menu.main_menu, menu);
 
         return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+
+        switch (item.getItemId()) {
+
+            case R.id.menu_patient:
+                //Navigation to the allpatienActivity
+                Intent intent = new Intent(this, AllPatientActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+
+            case R.id.menu_agenda:
+
+                Calendar today = Calendar.getInstance();
+
+                Uri uriCalendar = Uri.parse("content://com.android.calendar/time/" + String.valueOf(today.getTimeInMillis()));
+                Intent intentCalendar = new Intent(Intent.ACTION_VIEW, uriCalendar);
+
+                //Use the native calendar app to view the date
+                startActivity(intentCalendar);
+
+                return true;
+
+            default:
+                return false;
+
+        }
+
     }
 
     @Override

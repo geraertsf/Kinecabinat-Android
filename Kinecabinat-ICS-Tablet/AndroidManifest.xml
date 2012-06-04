@@ -4,7 +4,10 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="15"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
     <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application android:label="@string/app_name" android:icon="@drawable/skull" android:logo="@drawable/skull">
         <activity android:name="KineCabinatStartActivity"
                   android:label="@string/app_name"
@@ -14,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="AllPatientActivity"/>
+        <activity android:name="CreatePatientActivity"/>
         <provider android:name=".content.PatientContentProvider"
                   android:authorities="be.geraerts.content.PatientContentProvider"/>
     </application>
