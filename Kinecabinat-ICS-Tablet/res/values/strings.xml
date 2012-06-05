@@ -11,10 +11,10 @@
     <string name="create_patient_dg_street">Rue</string>
     <string name="create_patient_dg_number">N°</string>
     <string name="create_patient_dg_box">Boite</string>
-    <string name="create_patient_dg_postcode">Code postal</string>
+    <string name="create_patient_dg_postcode">CP</string>
     <string name="create_patient_dg_city">Ville</string>
-    <string name="create_patient_dg_country"></string>
-    <string name="create_patient_dg_birthdate">Date de naissance</string>
+    <string name="create_patient_dg_country">Pays :</string>
+    <string name="create_patient_dg_birthdate">Date de naissance :</string>
     <string name="create_patient_dg_telephone">Tel</string>
     <string name="create_patient_dg_gsm1">Gsm</string>
     <string name="create_patient_dg_gsm2">Gsm sec</string>

@@ -15,7 +15,7 @@
     <TextView android:id="@+id/firstNameLabel"
               android:layout_height="wrap_content"
               android:layout_width="wrap_content"
-              android:layout_marginLeft="120dp"
+              android:layout_marginLeft="238dp"
               android:text="@string/create_patient_dg_first_name"
               android:layout_toRightOf="@id/NameLabel"
               android:textColor="@color/create_pat_dg_textColor"
@@ -23,7 +23,7 @@
 
     <EditText xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/et_name"
-              android:layout_width="100dp"
+              android:layout_width="215dp"
               android:layout_height="wrap_content"
               android:scrollHorizontally="false"
               android:layout_below="@id/NameLabel"
@@ -31,12 +31,11 @@
               android:background="@drawable/kinecabinat_edit_text"
               android:textColorHint="@color/etc_hint_color"
               android:textColor="@color/etc_text_color"
-
-
             />
+
     <EditText xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/et_first_name"
-              android:layout_width="100dp"
+              android:layout_width="200dp"
               android:layout_height="wrap_content"
               android:layout_marginLeft="50dp"
               android:scrollHorizontally="false"
@@ -48,17 +47,225 @@
               android:textColor="@color/etc_text_color"
 
             />
+    <TextView android:id="@+id/street"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_street"
+              android:layout_below="@id/et_name"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+    <TextView android:id="@+id/number"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_number"
+              android:layout_marginLeft="290dp"
+              android:layout_below="@id/et_name"
+              android:layout_toRightOf="@id/street"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+
+    <TextView android:id="@+id/box"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_box"
+              android:layout_marginLeft="30dp"
+              android:layout_below="@id/et_name"
+              android:layout_toRightOf="@id/number"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_street"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/street"
+              android:hint="@string/create_patient_dg_street"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_number"
+              android:layout_width="40dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/street"
+              android:layout_toRightOf="@id/et_street"
+              android:hint="@string/create_patient_dg_number"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_box"
+              android:layout_width="80dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/street"
+              android:layout_toRightOf="@id/et_number"
+              android:hint="@string/create_patient_dg_number"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+    <TextView android:id="@+id/postcode"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_postcode"
+              android:layout_below="@id/et_street"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+    <TextView android:id="@+id/city"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_city"
+              android:layout_marginLeft="60dp"
+              android:layout_below="@id/et_street"
+              android:layout_toRightOf="@id/postcode"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_postCode"
+              android:layout_width="50dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/postcode"
+              android:hint="@string/create_patient_dg_postcode"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_city"
+              android:layout_width="70dp"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="20dp"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/city"
+              android:layout_toRightOf="@id/et_postCode"
+              android:hint="@string/create_patient_dg_city"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+    <TextView android:id="@+id/country"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text="@string/create_patient_dg_country"
+              android:layout_below="@id/et_city"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_country"
+              android:layout_width="150dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginLeft="10dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/et_city"
+              android:layout_toRightOf="@id/country"
+              android:hint="@string/create_patient_dg_country"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+    <TextView android:id="@+id/birthdate"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:layout_marginTop="20dp"
+              android:text="@string/create_patient_dg_birthdate"
+              android:layout_below="@id/country"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+
+
+    <!-- Date picker here -->
+
+
+    <TextView android:id="@+id/tel"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_telephone"
+              android:layout_below="@id/birthdate"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+
+    <TextView android:id="@+id/gsm1"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_gsm1"
+              android:layout_marginLeft="100dp"
+              android:layout_below="@id/birthdate"
+              android:layout_toRightOf="@id/tel"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+
+    <TextView android:id="@+id/gsm2"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:text="@string/create_patient_dg_gsm2"
+              android:layout_marginLeft="75dp"
+              android:layout_below="@id/birthdate"
+              android:layout_toRightOf="@id/gsm1"
+              android:textColor="@color/create_pat_dg_textColor"
+            />
+
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_tel"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/tel"
+              android:hint="@string/create_patient_dg_telephone"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_gsm1"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/tel"
+              android:layout_toRightOf="@id/et_tel"
+              android:hint="@string/create_patient_dg_gsm1"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+    <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/et_gsm2"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:scrollHorizontally="false"
+              android:layout_below="@id/tel"
+              android:layout_toRightOf="@id/et_gsm1"
+              android:hint="@string/create_patient_dg_gsm2"
+              android:background="@drawable/kinecabinat_edit_text"
+              android:textColorHint="@color/etc_hint_color"
+              android:textColor="@color/etc_text_color"
+            />
+
+
+    <Button android:id="@+id/create_patient_close_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Annuler"
+            android:layout_below="@id/et_tel"/>
 
     <Button android:id="@+id/create_patient_create_button"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+
             android:text="Créer"
-            android:layout_below="@id/et_first_name"/>
-    <Button android:id="@+id/create_patient_close_button"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Annuler"
-            android:layout_toLeftOf="@id/create_patient_create_button"/>
+            android:layout_below="@id/et_tel"
+            android:layout_toRightOf="@id/create_patient_close_button"/>
 
 
 </RelativeLayout>
