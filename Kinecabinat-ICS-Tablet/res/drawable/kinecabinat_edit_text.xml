@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@color/etc_gradient_pressed_start"
+                      android:centerColor="@color/etc_gradient_pressed_center"
+                      android:endColor="@color/etc_gradient_pressed_end"
+                      android:angle="270"
+                      android:centerX="0.5"
+                      android:centerY="0.5"/>
+            <stroke android:width="5dp" android:color="@color/etc_border"/>
+            <corners android:radius="7dp"/>
+            <padding android:left="10dp"
+                     android:top="6dp"
+                     android:right="10dp"
+                     android:bottom="6dp"/>
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape>
+            <gradient android:startColor="@color/etc_gradient_focus_start"
+                      android:centerColor="@color/etc_gradient_focus_center"
+                      android:endColor="@color/etc_gradient_focus_end"
+                      android:angle="270"
+                      android:centerX="0.5"
+                      android:centerY="0.5"/>
+            <stroke android:width="5dp" android:color="@color/etc_border"/>
+            <corners android:radius="7dp"/>
+            <padding android:left="10dp"
+                     android:top="6dp"
+                     android:right="10dp"
+                     android:bottom="6dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="@color/etc_gradient_not_focus_start"
+                      android:centerColor="@color/etc_gradient_not_focus_center"
+                      android:endColor="@color/etc_gradient_not_focus_end"
+                      android:angle="270" android:centerX="0.5" android:centerY="0.5"/>
+            <stroke android:width="5dp" android:color="@color/etc_border"/>
+            <corners android:radius="7dp"/>
+            <padding android:left="10dp"
+                     android:top="6dp"
+                     android:right="10dp"
+                     android:bottom="6dp"/>
+        </shape>
+    </item>
+
+
+</selector>

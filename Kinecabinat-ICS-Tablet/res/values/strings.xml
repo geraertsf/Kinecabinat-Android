@@ -4,4 +4,19 @@
     <string name="app_title">Gestion de cabinet - Aline Thiernesse</string>
     <string name="subtitle_init">Page de démarrage</string>
     <string name="patients_list">Liste des patients</string>
+    <!-- string resources for create_patient_activity -->
+    <string name="create_patient_dg_title">Création d\'un nouveau patient</string>
+    <string name="create_patient_dg_name">Nom</string>
+    <string name="create_patient_dg_first_name">Prénom</string>
+    <string name="create_patient_dg_street">Rue</string>
+    <string name="create_patient_dg_number">N°</string>
+    <string name="create_patient_dg_box">Boite</string>
+    <string name="create_patient_dg_postcode">Code postal</string>
+    <string name="create_patient_dg_city">Ville</string>
+    <string name="create_patient_dg_country"></string>
+    <string name="create_patient_dg_birthdate">Date de naissance</string>
+    <string name="create_patient_dg_telephone">Tel</string>
+    <string name="create_patient_dg_gsm1">Gsm</string>
+    <string name="create_patient_dg_gsm2">Gsm sec</string>
+    <string name="create_patient_dg_button_create">Créer</string>
 </resources>

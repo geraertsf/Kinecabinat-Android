@@ -18,7 +18,10 @@
             </intent-filter>
         </activity>
         <activity android:name="AllPatientActivity"/>
-        <activity android:name="CreatePatientActivity"/>
+        <activity android:name="CreatePatientActivity"
+                  android:theme="@android:style/Theme.Dialog"
+                />
+
         <provider android:name=".content.PatientContentProvider"
                   android:authorities="be.geraerts.content.PatientContentProvider"/>
     </application>

@@ -1,9 +1,12 @@
 package be.geraerts;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 /**
  * @author François Geraerts
@@ -32,5 +35,32 @@ public class AllPatientActivity extends Activity {
         inflater.inflate(R.menu.menu_all_patients, menu);
 
         return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+
+        switch (item.getItemId()) {
+
+            case R.id.menu_add_patient:
+                //Navigation to the createPatienActivity
+                Intent intent = new Intent(this, CreatePatientActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+
+            case R.id.menu_del_patient:
+                Toast.makeText(this, "Delete button is pressed", Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                return false;
+
+        }
+
+
     }
 }
