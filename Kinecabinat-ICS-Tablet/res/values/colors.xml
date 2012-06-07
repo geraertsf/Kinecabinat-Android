@@ -11,17 +11,21 @@
     <color name="create_pat_dg_textColor">#204024</color>
 
     <!-- Edit text custom -->
-    <color name="etc_border">#1D7827</color>
-    <color name="etc_gradient_not_focus_start">#C6F7CC</color>
-    <color name="etc_gradient_not_focus_center">#B8F5BF</color>
-    <color name="etc_gradient_not_focus_end">#ABF5B4</color>
-    <color name="etc_gradient_focus_start">#6D9472</color>
-    <color name="etc_gradient_focus_center">#65946A</color>
-    <color name="etc_gradient_focus_end">#5A9161</color>
+    <color name="etc_border">#FFFFFF</color>
+    <color name="etc_gradient_not_focus_start">#5F85DE</color>
+    <color name="etc_gradient_not_focus_center">#507ADE</color>
+    <color name="etc_gradient_not_focus_end">#1271DE</color>
+    <color name="etc_gradient_focus_start">#1D3959</color>
+    <color name="etc_gradient_focus_center">#133357</color>
+    <color name="etc_gradient_focus_end">#092C54</color>
     <color name="etc_gradient_pressed_start">#40FFE600</color>
     <color name="etc_gradient_pressed_center">#60FFE600</color>
     <color name="etc_gradient_pressed_end">#90FFE600</color>
     <color name="etc_hint_color">#FFFFFF</color>
-    <color name="etc_text_color">#093D0F</color>
+    <color name="etc_text_color">#C8DEF7</color>
+
+    <!-- Background -->
+    <color name="background_black">#000000</color>
+    <color name="background_white">#FFFFFF</color>
 
 </resources>

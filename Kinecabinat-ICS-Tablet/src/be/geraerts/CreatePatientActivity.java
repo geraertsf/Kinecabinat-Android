@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * @author François Geraerts
@@ -22,13 +23,14 @@ public class CreatePatientActivity extends Activity {
 
 
         Button createButton = (Button) findViewById(R.id.create_patient_create_button);
+
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
                 //Appel du code pour créer le patient avec le content provider
-
+                Toast.makeText(getApplicationContext(), "The new patient is added", Toast.LENGTH_SHORT).show();
 
             }
         });

@@ -19,4 +19,5 @@
     <string name="create_patient_dg_gsm1">Gsm</string>
     <string name="create_patient_dg_gsm2">Gsm sec</string>
     <string name="create_patient_dg_button_create">Créer</string>
+    <string name="create_patient_dg_button_cancel">Annuler</string>
 </resources>

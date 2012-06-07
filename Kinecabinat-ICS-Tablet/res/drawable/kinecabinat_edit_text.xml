@@ -9,7 +9,7 @@
                       android:angle="270"
                       android:centerX="0.5"
                       android:centerY="0.5"/>
-            <stroke android:width="5dp" android:color="@color/etc_border"/>
+            <stroke android:width="2dp" android:color="@color/etc_border"/>
             <corners android:radius="7dp"/>
             <padding android:left="10dp"
                      android:top="6dp"
@@ -25,7 +25,7 @@
                       android:angle="270"
                       android:centerX="0.5"
                       android:centerY="0.5"/>
-            <stroke android:width="5dp" android:color="@color/etc_border"/>
+            <stroke android:width="2dp" android:color="@color/etc_border"/>
             <corners android:radius="7dp"/>
             <padding android:left="10dp"
                      android:top="6dp"
@@ -39,7 +39,7 @@
                       android:centerColor="@color/etc_gradient_not_focus_center"
                       android:endColor="@color/etc_gradient_not_focus_end"
                       android:angle="270" android:centerX="0.5" android:centerY="0.5"/>
-            <stroke android:width="5dp" android:color="@color/etc_border"/>
+            <stroke android:width="2dp" android:color="@color/etc_border"/>
             <corners android:radius="7dp"/>
             <padding android:left="10dp"
                      android:top="6dp"
