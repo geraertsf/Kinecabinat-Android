@@ -19,7 +19,7 @@ public class PatientContentProvider extends ContentProvider {
 
 
     public static final Uri CONTENT_URI =
-            Uri.parse("content://be.geraerts.kinecabinat/patients");
+            Uri.parse("content://be.geraerts.content.PatientContentProvider/patients");
 
 
     //Create the constants used to differentiate between the different URI
@@ -35,8 +35,8 @@ public class PatientContentProvider extends ContentProvider {
     //trailing '/[rowID]' will represent a single earthquake row.
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI("be.geraerts.kinecabinat", "patients", ALLROWS);
-        uriMatcher.addURI("be.geraerts.kinecabinat", "patients/#", SINGLE_ROW);
+        uriMatcher.addURI("be.geraerts.content.PatientContentProvider", "patients", ALLROWS);
+        uriMatcher.addURI("be.geraerts.content.PatientContentProvider", "patients/#", SINGLE_ROW);
     }
 
 
@@ -57,7 +57,7 @@ public class PatientContentProvider extends ContentProvider {
     public static final String AD_POSTCODE = "POSTCODE";
     public static final String AD_CITY = "CITY";
     public static final String AD_COUNTRY = "COUNTRY";
-    public static final String AD_FKEY_PAT_ID = "PATIENT_ID";
+    //public static final String AD_FKEY_PAT_ID = "PATIENT_ID";
 
 
     private PatientDatabaseHelper patientDatabaseHelper = null;
@@ -92,14 +92,14 @@ public class PatientContentProvider extends ContentProvider {
                 queryBuilder.appendWhere(PATIENT_KEY_ID + "=" + rowId);
 
             default:
-                queryBuilder.appendWhere(PATIENT_KEY_ID + "=" + AD_FKEY_PAT_ID); //Jointure sur les deux tables
+                //queryBuilder.appendWhere(PATIENT_KEY_ID + "=" + AD_FKEY_PAT_ID); //Jointure sur les deux tables
                 break;
 
         }
 
         //On va requêter sur la table PATIENT ET ADDRESS
-        queryBuilder.setTables(PatientDatabaseHelper.PATIENT_TABLE + "," + PatientDatabaseHelper.ADDRESS_TABLE);
-
+//        queryBuilder.setTables(PatientDatabaseHelper.PATIENT_TABLE + "," + PatientDatabaseHelper.ADDRESS_TABLE);
+        queryBuilder.setTables(PatientDatabaseHelper.PATIENT_TABLE);
 
         String groupBy = null;
         String having = null;
@@ -128,14 +128,18 @@ public class PatientContentProvider extends ContentProvider {
         SQLiteDatabase database = patientDatabaseHelper.getWritableDatabase();
 
 
-        long rowAddressId = database.insert(PatientDatabaseHelper.ADDRESS_TABLE, null, contentValues);
+//        long rowAddressId = database.insert(PatientDatabaseHelper.ADDRESS_TABLE, null, contentValues);
+//        long rowID = 0;
+
+
+//        if (rowAddressId > 0) {
+//            Log.d(PatientDatabaseHelper.TAG, "Inserting a new patient");
+//            rowID = database.insert(PatientDatabaseHelper.PATIENT_TABLE, null, contentValues);
+//        }
+
         long rowID = 0;
 
-
-        if (rowAddressId > 0) {
-            Log.d(PatientDatabaseHelper.TAG, "Inserting a new patient");
-            rowID = database.insert(PatientDatabaseHelper.PATIENT_TABLE, null, contentValues);
-        }
+        rowID = database.insert(PatientDatabaseHelper.PATIENT_TABLE, null, contentValues);
         // Insert the new row. The call to database.insert will return the row number
         // if it is successful.
 
@@ -167,7 +171,7 @@ public class PatientContentProvider extends ContentProvider {
         private static final String TAG = "PatientProvider";
 
         private static final String DATABASE_NAME = "kinecabinat.db";
-        private static final int DATABASE_VERSION = 1;
+        private static final int DATABASE_VERSION = 2;
         private static final String PATIENT_TABLE = "PATIENT";
         private static final String ADDRESS_TABLE = "ADDRESS";
 
@@ -179,9 +183,16 @@ public class PatientContentProvider extends ContentProvider {
                         + PATIENT_TEL + " TEXT, "
                         + PATIENT_GSM1 + " TEXT, "
                         + PATIENT_GSM2 + " TEXT, "
-                        + PATIENT_BIRTHDATE + " DATE); ";
+                        + PATIENT_BIRTHDATE + " DATE, "
+                        + AD_STREET + " TEXT, "
+                        + AD_NUMBER + " INTEGER, "
+                        + AD_BOX + " TEXT, "
+                        + AD_POSTCODE + " INTEGER, "
+                        + AD_CITY + " TEXT, "
+                        + AD_COUNTRY + " TEXT  "
+                        + "); ";
 
-
+        /*
         private static final String CREATE_TABLE_ADDRESS =
                 "create table " + ADDRESS_TABLE + " ("
                         + AD_KEY_ID + " integer primary key autoincrement, "
@@ -195,22 +206,31 @@ public class PatientContentProvider extends ContentProvider {
                         + "FOREIGN KEY ( " + AD_FKEY_PAT_ID + " ) REFERENCES " + PATIENT_TABLE + "(" + PATIENT_KEY_ID + "); ";
 
 
+        */
+
         public PatientDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
             super(context, name, factory, version);
         }
 
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
-            sqLiteDatabase.beginTransaction();
+            //sqLiteDatabase.beginTransaction();
             sqLiteDatabase.execSQL(CREATE_TABLE_PATIENT);
-            sqLiteDatabase.execSQL(CREATE_TABLE_ADDRESS);
-            sqLiteDatabase.endTransaction();
+            //sqLiteDatabase.execSQL(CREATE_TABLE_ADDRESS);
+            //sqLiteDatabase.endTransaction();
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
             Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
                     + newVersion + ", which will destroy all old data");
+
+
+            //TODO a supprimer après les tests sinon la db sera systématiquement supprimée
+            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + PATIENT_TABLE);
+
+            onCreate(sqLiteDatabase);
+
         }
     }
 
